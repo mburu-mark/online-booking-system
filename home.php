@@ -64,7 +64,7 @@ if (isset($_POST['makeBooking'])) {
         <input type="password" name="password" placeholder="Password">
         <button type="submit" name="login">Login</button>
     </form>
-
+<!-- should be in booking.php -->
     <h2>Make Booking</h2>
     <form action="" method="post">
         <input type="number" name="userId" placeholder="User ID">
