@@ -23,11 +23,11 @@ if (isset($_POST['login'])) {
     $userData = $user->login($email, $password);
     if ($userData) {
         echo "Login successful!";
-        // You can redirect to a dashboard here
+        header(header: "Location: book.php");
     } else {
         echo "Invalid credentials!";
     }
-}
+} 
 
 if (isset($_POST['makeBooking'])) {
     $userId = $_POST['userId'];
