@@ -7,10 +7,9 @@ $user = new user($conn);
 $booking = new booking($conn);
 
 if (isset($_POST['makeBooking'])) {
-    $userId = $_POST['userId'];
     $bookingDate = $_POST['bookingDate'];
     $bookingTime = $_POST['bookingTime'];
-    if ($booking->makeBooking($userId, $bookingDate, $bookingTime)) {
+    if ($booking->makeBooking( $bookingDate, $bookingTime)) {
         echo "Booking made successfully!";
     } else {
         echo "Booking failed!";
@@ -29,9 +28,8 @@ if (isset($_POST['makeBooking'])) {
 <body>
 <h2>Make Booking</h2>
     <form action="" method="post">
-        <input type="number" name="userId" placeholder="User ID">
-        <input type="date" name="bookingDate" placeholder="Booking Date">
-        <input type="time" name="bookingTime" placeholder="Booking Time">
+        <input type="date" name="bookingDate" placeholder="Booking Date"><br><br>
+        <input type="time" name="bookingTime" placeholder="Booking Time"><br><br>
         <button type="submit" name="makeBooking">Make Booking</button>
     </form>
 </body>

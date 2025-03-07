@@ -6,10 +6,9 @@ class booking {
         $this->conn = $conn;
     }
 
-    public function makeBooking($userId, $bookingDate, $bookingTime) {
-        $query = "INSERT INTO bookings (user_id, booking_date, booking_time, status) VALUES (:user_id, :booking_date, :booking_time, 'pending')";
+    public function makeBooking($bookingDate, $bookingTime) {
+        $query = "INSERT INTO bookings (user_id, booking_date, booking_time, status) VALUES (:booking_date, :booking_time, 'pending')";
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(':user_id', $userId);
         $stmt->bindParam(':booking_date', $bookingDate);
         $stmt->bindParam(':booking_time', $bookingTime);
         return $stmt->execute();

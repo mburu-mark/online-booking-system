@@ -52,25 +52,17 @@ if (isset($_POST['makeBooking'])) {
 <body>
     <h2>Register</h2>
     <form action="" method="post">
-        <input type="text" name="name" placeholder="Name">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
+        <input type="text" name="name" placeholder="Name" required><br><br>
+        <input type="email" name="email" placeholder="Email" required><br><br>
+        <input type="password" name="password" placeholder="Password" required><br><br>
         <button type="submit" name="register">Register</button>
     </form>
 
     <h2>Login</h2>
     <form action="" method="post">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
+        <input type="email" name="email" placeholder="Email" required><br><br>
+        <input type="password" name="password" placeholder="Password" required><br><br>
         <button type="submit" name="login">Login</button>
-    </form>
-<!-- should be in booking.php -->
-    <h2>Make Booking</h2>
-    <form action="" method="post">
-        <input type="number" name="userId" placeholder="User ID">
-        <input type="date" name="bookingDate" placeholder="Booking Date">
-        <input type="time" name="bookingTime" placeholder="Booking Time">
-        <button type="submit" name="makeBooking">Make Booking</button>
     </form>
 </body>
 </html>
